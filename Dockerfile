@@ -34,6 +34,7 @@ RUN apk add --no-cache git
 #RUN echo 'NZBGetPostProcess.py:SHOULDCONVERT=True' >> /config/nzbget.conf
 
 # Install nzbToMedia
+RUN apk add --no-cache python
 RUN apk add --no-cache git
 RUN git clone https://github.com/clinton-hall/nzbToMedia.git /scripts/nzbToMedia
 

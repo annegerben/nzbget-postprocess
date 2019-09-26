@@ -34,19 +34,19 @@ RUN apk add --no-cache git
 #RUN echo 'NZBGetPostProcess.py:SHOULDCONVERT=True' >> /config/nzbget.conf
 
 # Install nzbToMedia
-RUN apk add --no-cache python
+RUN apk add --no-cache python3
 RUN apk add --no-cache git
 RUN git clone https://github.com/clinton-hall/nzbToMedia.git /scripts/nzbToMedia
 
 #Set MP4_Automator script settings in NZBGet settings
-#RUN echo 'nzbToCouchPotato.py:auto_update=1' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:cpsCategory=Movie' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:cpsdelete_failed=0' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:getSubs=1' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:subLanguages=eng' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:transcode=1' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:duplicate=0' >> /config/nzbget.conf
-#RUN echo 'nzbToCouchPotato.py:ignoreExtensions=' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:auto_update=1' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:cpsCategory=Movie' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:cpsdelete_failed=0' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:getSubs=1' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:subLanguages=eng' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:transcode=0' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:duplicate=0' >> /config/nzbget.conf
+RUN echo 'nzbToCouchPotato.py:ignoreExtensions=' >> /config/nzbget.conf
 #RUN echo 'nzbToCouchPotato.py:outputFastStart=1' >> /config/nzbget.conf
 #RUN echo 'nzbToCouchPotato.py:embedSubs=0' >> /config/nzbget.conf
 #RUN echo 'nzbToCouchPotato.py:extractSubs=1' >> /config/nzbget.conf
@@ -54,12 +54,12 @@ RUN git clone https://github.com/clinton-hall/nzbToMedia.git /scripts/nzbToMedia
 #RUN echo 'nzbToCouchPotato.py:outputVideoResolution=' >> /config/nzbget.conf
 #RUN echo 'nzbToCouchPotato.py:outputAudioTrack2Codec=' >> /config/nzbget.conf
 #RUN echo 'nzbToCouchPotato.py:outputAudioOtherCodec=' >> /config/nzbget.conf
-#RUN echo '' >> /config/nzbget.conf
-RUN echo 'nzbToGamez.py:auto_update=1' >> /config/nzbget.conf
-RUN echo 'nzbToHeadPhones.py:auto_update=1' >> /config/nzbget.conf
+RUN echo '' >> /config/nzbget.conf
+#RUN echo 'nzbToGamez.py:auto_update=1' >> /config/nzbget.conf
+#RUN echo 'nzbToHeadPhones.py:auto_update=1' >> /config/nzbget.conf
 RUN echo 'nzbToMedia.py:auto_update=1' >> /config/nzbget.conf
-RUN echo 'nzbToMylar.py:auto_update=1' >> /config/nzbget.conf
-RUN echo 'nzbToNzbDrone.py:auto_update=1' >> /config/nzbget.conf
+#RUN echo 'nzbToMylar.py:auto_update=1' >> /config/nzbget.conf
+#RUN echo 'nzbToNzbDrone.py:auto_update=1' >> /config/nzbget.conf
 RUN echo 'nzbToSickBeard.py:auto_update=1' >> /config/nzbget.conf
 
 #Set script file permissions
